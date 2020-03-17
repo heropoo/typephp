@@ -1,0 +1,12 @@
+{
+  "name": "heropoo/typephp-tests",
+  "authors": [
+    {
+      "name": "heropoo",
+      "email": "aiyouyou1000@163.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  }
+}
