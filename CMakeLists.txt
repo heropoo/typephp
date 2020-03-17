@@ -1,6 +1,9 @@
 # CMake 最低版本号要求
 cmake_minimum_required (VERSION 2.8)
 
+set(CMAKE_C_COMPILER "clang")
+set(CMAKE_CXX_COMPILER "clang++")
+
 # 项目信息
 project (TypePHP)
 
