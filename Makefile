@@ -1,21 +1,11 @@
-CC=clang
-CXX=clang++
-LLVMCONFIG=llvm-config
-CFLAGES=-Wall -g
-CPPFLAGS = `$(LLVMCONFIG) --cppflags` -std=c++11 -g
-LDFLAGS = `$(LLVMCONFIG) --ldflags` -lpthread -ldl -lz -rdynamic
+all: cmake
+	cd build && make
+	cd ..
 
-SRC_PATH=./src
-BUILD_PATH=./build
-
-#all: typephp
-
-typephp: $(SRC_PATH)/main.cpp
-	mkdir -p $(BUILD_PATH)
-	$(CXX) $(SRC_PATH)/main.cpp -o $(BUILD_PATH)/typephp
-
-test:
-	echo 'todo test'
+cmake:
+	mkdir -p build
+	cd ./build && cmake ..
+	cd ..
 
 clean:
-	- rm -rf build/*
+	- rm -rf build
