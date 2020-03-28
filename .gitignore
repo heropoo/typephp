@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 .idea/
->>>>>>> master
 build/
+.vscode/settings.json

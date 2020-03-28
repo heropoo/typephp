@@ -7,7 +7,7 @@ using namespace std;
 int main(const int argc, char *agrv[])
 {
     if(argc < 2){
-        cout << "Typephp v0.1" << endl;
+        cout << "Typephp v0.1 dev" << endl;
         die("USAGE: typephp <filepath>");
     }
 
