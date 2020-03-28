@@ -7,5 +7,8 @@ cmake:
 	cd ./build && cmake ..
 	cd ..
 
+run: all
+	./build/typephp
+
 clean:
 	- rm -rf build

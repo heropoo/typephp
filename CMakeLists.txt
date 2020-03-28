@@ -14,6 +14,12 @@ aux_source_directory(./src DIR_SRCS)
 # 添加 math 子目录
 # add_subdirectory(math)
 
+execute_process(
+    COMMAND bash "-c" "git log|head -n 1|awk '{printf $2}'"
+    OUTPUT_VARIABLE GIT_COMMIT
+)
+add_definitions(-DGIT_COMMIT_SHA1="${GIT_COMMIT}")
+
 # 指定生成目标
 add_executable(typephp ${DIR_SRCS})
 
