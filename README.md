@@ -2,7 +2,7 @@
 typephp
 
 ## Requirement
-- llvm/clang 6
+- llvm/clang 6+
 - bison flex
 
 ## Build 
