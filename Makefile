@@ -12,3 +12,4 @@ run: all
 
 clean:
 	- rm -rf build
+	- rm -rf src/version.h
