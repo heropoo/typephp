@@ -49,7 +49,7 @@ execute_process(
 )
 
 configure_file(
-  ${CMAKE_CURRENT_SOURCE_DIR}/version.h.ini
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/version.h.ini
   #${CMAKE_BINARY_DIR}/version.h
   ${CMAKE_CURRENT_SOURCE_DIR}/src/version.h
   @ONLY
