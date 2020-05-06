@@ -2,16 +2,26 @@
 #include <string>
 #include <string.h>
 #include "helpers.h"
+#include "version.h"
 
 using namespace std;
 
 int main(const int argc, char *agrv[])
 {
-    if(argc < 2){
-       // cout << "Typephp v0.1 dev" << endl;
-        char short_commit_id[8];
-        strncpy(short_commit_id, GIT_COMMIT_SHA1, 7);  
-        printf("Typephp v0.1-dev-%s\n", short_commit_id);
+    if (argc < 2)
+    {
+        // cout << "Typephp v0.1 dev" << endl;
+        // char short_commit_id[8];
+        // strncpy(short_commit_id, GIT_COMMIT_SHA1, 7);
+        // printf("Typephp v0.1-dev-%s\n", short_commit_id);
+        if (tag_name.length() > 0)
+        {
+            printf("Typephp version %s\n", tag_name.c_str());
+        }
+        else
+        {
+            printf("Typephp version %s-%s\n", branch_name.c_str(), commit_hash.c_str());
+        }
         die("USAGE: typephp <filepath>");
     }
 
